@@ -1,0 +1,10 @@
+
+$lateef-weights: ('Lateef-ExtraLight': 200,'Lateef-Light': 300,'Lateef-Regular': 400,'Lateef-Medium': 500,'Lateef-Bold': 700,'Lateef-ExtraBold': 700)
+
+@each $filename, $weight in $lateef-weights
+  @font-face
+    font-family: 'Lateef'
+    src: url('../../public/fonts/#{$filename}.woff2') format('woff2')
+    font-weight: $weight
+    font-style: normal
+    font-display: swap
