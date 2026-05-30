@@ -1,3 +1,5 @@
+@use '../index' as * 
+
 .header
   position: fixed
   top: 0
@@ -47,7 +49,6 @@
     &:hover
       color: #ff9e00
 
-  // Бургер-кнопка
   &__burger
     display: none
     flex-direction: column
@@ -81,7 +82,6 @@
         &:nth-child(3)
           transform: translateY(-8px) rotate(-45deg)
 
-  // Мобильное меню
   &__mobile-nav
     display: none
     position: fixed
@@ -116,13 +116,22 @@
       color: #ff9e00
       background: #fff8ee
 
-@media (max-width: 639px)
-  .header
-    &__nav
-      display: none
+@include mobile
+    .header
+      &__nav
+        display: none 
+      &__burger
+        display: flex
+      &__inner
+        padding: 0 20px 
 
-    &__burger
-      display: flex
+// @media (max-width: 639px)
+//   .header
+//     &__nav
+//       display: none
 
-    &__inner
-      padding: 0 20px
+//     &__burger
+//       display: flex
+
+//     &__inner
+//       padding: 0 20px

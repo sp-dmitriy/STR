@@ -1,0 +1,18 @@
+@use './variables' as *
+
+@mixin container
+  max-width: $container-width
+  margin: 0 auto
+  padding: 0 $container-padding
+
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin transition($props: all)
+  transition: $props $transition-base ease
+
+@mixin mobile
+  @media (max-width: #{$bp-mobile})
+    @content
