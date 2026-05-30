@@ -1,4 +1,4 @@
-.header 
+.header
   position: fixed
   top: 0
   left: 0
@@ -8,48 +8,121 @@
   z-index: 100
   border-bottom: 1px solid #eee
 
+  &__inner
+    max-width: 1440px
+    margin: 0 auto
+    height: 100%
+    display: flex
+    align-items: center
+    padding: 0 50px
+    position: relative
 
-.header__inner 
-  max-width: 1440px
-  margin: 0 auto
-  height: 100%
-  display: flex
-  align-items: center
-  padding: 0 50px
-  position: relative
+  &__logo
+    display: flex
+    align-items: center
+    gap: 12px
 
+  &__logo-img
+    width: 80px
+    height: 80px
+    object-fit: contain
 
-.header__logo 
-  display: flex
-  align-items: center
-  gap: 12px
+  &__logo-text
+    font-size: 30px
+    font-weight: 700
+    color: #ff9e00
 
+  &__nav
+    display: flex
+    align-items: center
+    gap: 60px
+    margin-left: auto
 
-.header__logo-img 
-  width: 80px
-  height: 80px
-  object-fit: contain
+  &__nav-link
+    font-size: 20px
+    font-weight: 700
+    color: #000
+    transition: color 0.2s
 
+    &:hover
+      color: #ff9e00
 
-.header__logo-text 
-  font-size: 30px
-  font-weight: 700
-  color: #ff9e00
+  // Бургер-кнопка
+  &__burger
+    display: none
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 5px
+    width: 40px
+    height: 40px
+    margin-left: auto
+    cursor: pointer
+    background: none
+    border: none
+    padding: 4px
+    z-index: 110
 
+    span
+      display: block
+      width: 28px
+      height: 3px
+      background: #000
+      border-radius: 2px
+      transition: transform 0.3s ease, opacity 0.3s ease
 
-.header__nav 
-  display: flex
-  align-items: center
-  gap: 60px
-  margin-left: auto
+    &.is-active
+      span
+        &:nth-child(1)
+          transform: translateY(8px) rotate(45deg)
+        &:nth-child(2)
+          opacity: 0
+          transform: scaleX(0)
+        &:nth-child(3)
+          transform: translateY(-8px) rotate(-45deg)
 
+  // Мобильное меню
+  &__mobile-nav
+    display: none
+    position: fixed
+    top: 91px
+    left: 0
+    width: 100%
+    background: #fff
+    border-bottom: 1px solid #eee
+    flex-direction: column
+    align-items: center
+    gap: 0
+    z-index: 99
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1)
 
-.header__nav-link 
-  font-size: 20px
-  font-weight: 700
-  color: #000
-  transition: color 0.2s
+    &.is-open
+      display: flex
 
+  &__mobile-nav-link
+    width: 100%
+    text-align: center
+    padding: 18px 20px
+    font-size: 22px
+    font-weight: 700
+    color: #000
+    border-bottom: 1px solid #eee
+    transition: color 0.2s, background 0.2s
 
-.header__nav-link:hover 
-  color: #ff9e00
+    &:last-child
+      border-bottom: none
+
+    &:hover
+      color: #ff9e00
+      background: #fff8ee
+
+@media (max-width: 639px)
+  .header
+    &__nav
+      display: none
+
+    &__burger
+      display: flex
+
+    &__inner
+      padding: 0 20px
