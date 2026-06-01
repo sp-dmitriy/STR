@@ -1,3 +1,35 @@
+@use '../variables' as *
+@use '../mixins' as *
+
 .photos
-  height: 400px
-  background-color: gold
+  &__inner
+    max-width: 1440px
+    margin: 0 auto
+    padding: 90px 50px 40px 50px
+    background-color: $color-grey-2
+  &__title
+    width: 400px
+    padding: 16px
+    margin: 0 auto
+    margin-top: 30px
+    text-align: center
+    color: $color-white
+    font-size: 37px
+    font-weight: 400
+    background-color: $color-orange-1
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.22)
+    border-radius: 20px
+  &__items
+    gap: 20px 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 40px 0
+  &__card
+    padding: 20px
+    border-radius: 35px
+    background-color: #FFD28A99 
+    box-shadow: 12px 23px 12px rgba(0, 0, 0, 0.22)
+  &__img 
+    // border-radius: 35px
+

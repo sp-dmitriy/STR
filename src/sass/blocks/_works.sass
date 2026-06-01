@@ -1,3 +1,64 @@
+@use '../variables' as *
+@use '../mixins' as *
+
 .works
-  height: 400px
-  background-color: gold
+  &__inner
+    max-width: 1440px
+    margin: 0 auto
+    padding-top: 20px
+    background-color: $color-grey-2 
+  &__content
+   max-width: 1440px
+    margin: 0 auto
+    padding-top: 20px
+    background-color: $color-grey-2 
+  &__title 
+    width: 400px
+    padding: 16px
+    margin: 0 auto
+    text-align: center
+    color: $color-white
+    font-size: 37px
+    font-weight: 400
+    background-color: $color-grey-2
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.22)
+    border-radius: 20px 
+  &__items
+    gap: 20px 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 0 60px 0 
+  &__card
+    gap: 10px
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    &:nth-child(even) 
+      flex-direction: column-reverse
+      .works__card-description
+        flex-direction: column-reverse
+        img 
+          rotate: (180deg)
+    &:nth-child(odd) 
+      flex-direction: column
+      .works__card-description
+        flex-direction: column
+    &-image 
+      padding: 20px
+      border-radius: 35px
+      background-color: #FFD28A99 
+      box-shadow: 12px 23px 12px rgba(0, 0, 0, 0.22) 
+    &-title 
+      font-size: 36px
+      font-weight: 800
+      color: $color-white
+      text-align: center
+    &-description
+      padding: 15px 
+      display: flex
+      align-items: center
+      flex-direction: column
+
+  

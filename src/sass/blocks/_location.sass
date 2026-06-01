@@ -1,0 +1,40 @@
+@use '../variables' as *
+@use '../mixins' as *
+
+.location
+  &__inner
+    max-width: 1440px
+    margin: 0 auto
+    padding-top: 20px
+    background-color: $color-grey-2  
+  &__content
+    max-width: 1440px
+    margin: 0 auto
+    padding: 60px
+    border-radius: 66px 66px 0 0 
+    background-color: $color-orange-4
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 20px
+  &__card
+    background-color: $color-orange-1
+    border-radius: 46px 
+    padding: 30px 10px
+    width: 425px
+    &-subtitle
+      display: flex
+      align-items: center
+      gap: 5px
+      span
+        font-size: 45px
+        font-weight: 700
+        color: $color-white 
+        line-height: 1
+    &-title
+      color: $color-white 
+      font-size: 40px
+      font-weight: 200
+      margin: 20px 0 0 110px
+  &__map  
+    width: 680px  
