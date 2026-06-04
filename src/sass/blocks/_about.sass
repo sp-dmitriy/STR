@@ -6,20 +6,17 @@
     margin: 0 auto
     max-width: 1440px 
     background-color: $color-orange-3
-
   &__content
     background: $color-grey-1
     border-radius: 66px 66px 0 0 
     overflow: hidden
     position: relative
     padding: 40px 0 
-
   &__header
     display: flex
     justify-content: center
     padding-top: 46px
     margin-bottom: 0
-
   &__tag
     background: $color-orange-1
     border-radius: 20px
@@ -27,19 +24,16 @@
     font-size: 35px
     font-weight: 200
     color: $color-grey-5
-
   &__photo
     position: absolute
     right: 0
     bottom: 0
     object-fit: cover
-
   &__body
     z-index: 2
     max-width: 900px
     position: relative
     padding: 36px 50px 60px
-
   &__main-text
     font-size: 30px
     font-weight: 800
@@ -48,17 +42,14 @@
     margin-bottom: 30px
     span 
       color: $color-orange-1
-
   &__services-title
     font-size: 28px
     font-weight: 800
     color: #000
     margin-bottom: 16px
-
   &__services-list
     list-style: none
     padding: 0
-
   &__services-item
     display: flex
     align-items: center
@@ -67,7 +58,6 @@
     font-weight: 200
     color: #000
     margin-bottom: 8px
-
     &::before
       content: ''
       display: inline-block
@@ -75,3 +65,51 @@
       height: 19px
       border-radius: 50%
       background-color: $color-orange-1
+  
+@media (max-width: #{$pb-small})
+  .about
+    &__content
+      padding: 30px 0 
+    &__header
+      padding-top: 0
+    &__tag
+      text-align: center
+      width: 300px
+      padding: 10px 30px
+      font-size: 25px
+    &__main-text
+      font-size: 20px
+      margin-bottom: 30px
+    &__services-title
+      font-size: 20px
+    &__services-item
+      gap: 10px
+      font-size: 20px
+      &::before
+        width: 15px
+        height: 15px
+
+@media (max-width: 400px)
+  .about
+    &__body 
+      padding: 20px
+    &__content
+      padding: 10px 0 
+    &__header
+      padding-top: 0
+    &__tag
+      text-align: center
+      width: 250px
+      padding: 10px 30px
+      font-size: 16px
+    &__main-text
+      font-size: 16px
+      margin-bottom: 30px
+    &__services-title
+      font-size: 16px
+    &__services-item
+      font-size: 16px
+    &__photo 
+      width: 70%
+
+      

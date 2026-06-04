@@ -6,14 +6,12 @@
   overflow: hidden
   position: relative
   padding: 60px 50px 100px
-
   &__bg
     inset: 0
     z-index: 0
     position: absolute
     border-radius: 55px 55px 0 0 
     background: linear-gradient(180deg, $color-grey-4 0%, $color-grey-2 100%)
-
   &__bg-img
     position: absolute
     inset: 0
@@ -22,38 +20,32 @@
     object-fit: cover
     z-index: 1
     border-radius: 55px 55px 0 0 
-
   &__inner
     position: relative
     max-width: 1440px
     margin: 0 auto
     z-index: 2
-
   &__heading
     font-size: 47px
     font-weight: 700
     color: $color-black
     text-align: center
     margin-bottom: 16px
-
   &__subheading
     font-size: 25px
     font-weight: 200
     color: #000
     text-align: center
     margin-bottom: 60px
-
   &__cards
     display: flex
     justify-content: center
     gap: 20px
     flex-wrap: wrap
     margin-bottom: 60px
-
   &__more
     display: flex
     justify-content: center
-
   &__more-btn
     background: rgba(230, 229, 229, 0.42)
     border-radius: 25px
@@ -65,6 +57,34 @@
     cursor: pointer
     transition: background 0.2s
     white-space: nowrap
-
     &:hover
       background: rgba(255, 145, 0, 0.5)
+
+@media (max-width: 670px)
+  .popular
+      &__more-btn
+        padding: 20px
+
+@media (max-width: #{$pb-small})
+  .popular
+      padding: 20px
+      &__heading
+        font-size: 25px
+      &__subheading
+        font-size: 16px
+      &__cards
+        flex-wrap: nowrap
+      &__more-btn
+        padding: 20px
+        font-size: 20px
+
+@media (max-width: 428px)
+  .popular
+      &__more-btn
+        max-width: 300px
+        padding: 15px
+        font-size: 16px
+        
+
+
+
