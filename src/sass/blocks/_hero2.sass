@@ -1,0 +1,45 @@
+@use '../variables' as *
+@use '../mixins' as *
+
+.hero
+  height: 623px
+  margin-top: 90px
+  position: relative
+  background: linear-gradient(147deg, #ff9e00 0%, #515151 100%)
+  &__inner 
+    @include container
+    display: flex
+    align-items: center
+  &__title
+    margin: 130px 0 30px 0
+    font-size: 40px
+    font-weight: 800
+    color: $color-title
+    font-family: 'Lateef-Bold'
+    text-transform: uppercase 
+  &__description 
+    width: 660px
+    font-size: 40px
+    font-weight: 300
+    line-height: 1.25
+    color: $color-black
+    font-family: 'Lateef-Light'
+  &__deco
+    position: absolute
+    right: 120px
+    top: 52px
+    width: 552px
+    height: 525px
+    background: rgba(254, 156, 0, 0.6)
+    border-radius: 73px
+    z-index: 1
+  &__photo
+    position: absolute
+    right: 101px
+    top: 27px
+    z-index: 3
+  &__photo-bg
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 2

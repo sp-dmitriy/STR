@@ -2,44 +2,73 @@
 @use '../mixins' as *
 
 .hero
-  height: 623px
-  margin-top: 90px
-  position: relative
-  background: linear-gradient(147deg, #ff9e00 0%, #515151 100%)
   &__inner 
     @include container
+    padding: 0
+    margin-top: 90px
+    background: linear-gradient(147deg, #ff9e00 0%, #515151 100%)
     display: flex
     align-items: center
+    justify-content: space-between
+  &__content
+    width: 740px
+    padding: 20px 0 20px 40px 
   &__title
-    margin: 130px 0 30px 0
     font-size: 40px
     font-weight: 800
     color: $color-title
+    line-height: 1
     font-family: 'Lateef-Bold'
     text-transform: uppercase 
   &__description 
-    width: 660px
     font-size: 40px
     font-weight: 300
     line-height: 1.25
     color: $color-black
     font-family: 'Lateef-Light'
-  &__deco
-    position: absolute
-    right: 120px
-    top: 52px
-    width: 552px
-    height: 525px
-    background: rgba(254, 156, 0, 0.6)
-    border-radius: 73px
-    z-index: 1
-  &__photo
-    position: absolute
-    right: 101px
-    top: 27px
-    z-index: 3
-  &__photo-bg
-    position: absolute
-    right: 0
-    top: 0
-    z-index: 2
+    line-height: 1.25
+    margin-top: 30px
+  &__image
+    width: 600px 
+    padding: 0
+
+
+@media (max-width: 1097px)
+  .hero
+    &__description 
+      font-size: 30px
+
+@media (max-width: #{$bp-tablet})
+  .hero
+    &__description 
+      font-size: 25px
+    
+@media (max-width: 730px)
+  .hero
+    &__inner 
+      flex-direction: column
+      align-items: flex-end
+    &__content 
+      width: 100%
+      padding: 0
+    &__title 
+      width: 100%
+      padding: 20px
+    &__description 
+      padding: 20px
+      margin: 0
+    
+@media (max-width: 590px)
+  .hero
+    &__image 
+      width: 400px  
+
+@media (max-width: 380px)
+  .hero
+    &__title 
+      font-size: 32px
+    &__description 
+      font-size: 16px
+    &__image 
+      width: 300px      
+
