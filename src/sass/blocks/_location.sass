@@ -35,3 +35,41 @@
   &__map
     padding: 60px 0  
     width: 680px  
+
+@media (max-width: 1160px)
+  .location
+    &__content 
+      flex-direction: column
+    &__card
+      margin-top: 20px
+    
+@media (max-width: 720px)
+  .location
+    &__card 
+      &-title 
+        font-size: 30px
+        line-height: 1
+      &-subtitle
+        font-size: 30px
+    &__map
+      padding: 20px 
+      width: 100%   
+  
+@media (max-width: 465px)
+  .location
+    &__card
+      padding: 10px
+      width: 90% 
+      &-title
+        text-align: center 
+        margin: 0
+        font-size: 20px
+        line-height: 1
+      &-subtitle
+        img 
+          width: 40px  
+        span 
+          font-size: 25px
+    &__map
+      padding: 20px 
+      width: 100% 

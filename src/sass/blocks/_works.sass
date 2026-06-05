@@ -60,4 +60,29 @@
       align-items: center
       flex-direction: column
 
-  
+ 
+@media (max-width: 880px)
+  .works
+    &__items
+      flex-direction: column
+    &__card
+      &:nth-child(even) 
+        flex-direction: column
+        .works__card-description
+          flex-direction: column
+          img 
+            rotate: (0deg)
+      &:nth-child(odd) 
+        flex-direction: column
+        .works__card-description
+          flex-direction: column
+      
+ 
+@media (max-width: #{$pb-small})
+  .works
+    &__title
+      max-width: 200px 
+      padding: 8px
+      font-size: 25px
+    &__card-title 
+      font-size: 25px

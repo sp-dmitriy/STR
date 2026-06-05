@@ -8,7 +8,8 @@
     padding: 90px 50px 40px 50px
     background-color: $color-grey-2
   &__title
-    width: 400px
+    width: 100%
+    max-width: 400px
     padding: 16px
     margin: 0 auto
     margin-top: 30px
@@ -32,3 +33,19 @@
     box-shadow: 12px 23px 12px rgba(0, 0, 0, 0.22)
 
 
+@media (max-width: 880px)
+  .photos
+    &__items
+      flex-wrap: wrap
+      justify-content: center
+      padding: 10px 0 0 0 0
+
+@media (max-width: #{$pb-small})
+  .photos
+    &__inner
+      padding: 20px
+    &__title 
+      padding: 8px
+      font-size: 25px
+    &__items 
+      padding: 10px
