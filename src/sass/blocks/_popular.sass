@@ -34,14 +34,8 @@
   &__subheading
     font-size: 25px
     font-weight: 200
-    color: #000
+    color: $color-black
     text-align: center
-    margin-bottom: 60px
-  &__cards
-    display: flex
-    justify-content: center
-    gap: 20px
-    flex-wrap: wrap
     margin-bottom: 60px
   &__more
     display: flex
@@ -59,6 +53,9 @@
     white-space: nowrap
     &:hover
       background: rgba(255, 145, 0, 0.5)
+  &__swiper-pagination
+    margin: 20px 0
+    text-align: center
 
 @media (max-width: 670px)
   .popular
@@ -72,8 +69,6 @@
         font-size: 25px
       &__subheading
         font-size: 16px
-      &__cards
-        flex-wrap: nowrap
       &__more-btn
         padding: 20px
         font-size: 20px
